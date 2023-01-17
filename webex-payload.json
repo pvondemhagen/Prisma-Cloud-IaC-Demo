@@ -1,0 +1,141 @@
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "content": {
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                "type": "AdaptiveCard",
+                "version": "1.0",
+                "body": [
+                    {
+                        "type": "Container",
+                        "id": "prismaTitleContainer",
+                        "style": "default",
+                        "padding": "Small",
+                        "items": [
+                            {
+                                "type": "ColumnSet",
+                                "id": "d24a3e48-1da9-9eab-d18c-a49c1e556abf",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "id": "prisma-logo-image",
+                                        "padding": "None",
+                                        "width": "auto",
+                                        "items": [
+                                            {
+                                                "type": "Image",
+                                                "id": "5c41b425-f824-ab8a-0e49-809baf07a0a8",
+                                                "url": "https://s3.amazonaws.com/redlock-static/assets/img/prisma/prisma-lock-logo.png",
+                                                "altText": "PrismaCloud",
+                                                "size": "Small",
+                                                "width": "60px"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "width": "stretch",
+                                        "id": "message-title",
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "id": "db70b976-6f89-6395-9b09-551008348582",
+                                                "wrap": true,
+                                                "text": "${AlertRuleName} New Notification",
+                                                "horizontalAlignment": "Left",
+                                                "weight": "Bolder",
+                                                "isSubtle": true
+                                            }
+                                        ],
+                                        "padding": "None",
+                                        "verticalContentAlignment": "Center"
+                                    }
+                                ],
+                                "padding": "Default"
+                            },
+                            {
+                                "type": "FactSet",
+                                "id": "massage-context-info1",
+                                "facts": [
+                                    {
+                                        "title": "Account Name",
+                                        "value": "${AccountName}"
+                                    },
+                                    {
+                                        "title": "Cloud Type",
+                                        "value": "${CloudType}"
+                                    },
+                                    {
+                                        "title": "More details",
+                                        "value": "[click here]${CallbackUrl}"
+                                    }
+                                ],
+                                "separator": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Container",
+                        "id": "details-table-headers",
+                        "padding": {
+                                        "top": "Default",
+                                        "bottom": "None",
+                                        "left": "Default",
+                                        "right": "Default"
+                                    },
+                        "spacing": "Large",
+                        "items": [
+                            {
+                                "type": "ColumnSet",
+                                "columns": [
+                                    {
+                                        "type": "Column",
+                                        "id": "header1",
+                                        "padding": "Small",
+                                        "width": 50,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "id": "b627fe02-2562-0c95-6429-84a045c6555f",
+                                                "text": "Policy Name",
+                                                "wrap": true,
+                                                "horizontalAlignment": "Left",
+                                                "verticalContentAlignment": "Bottom",
+                                                "weight": "Bolder",
+                                                "isSubtle": true
+                                            }
+                                        ],
+                                        "spacing": "Medium"
+                                    },
+                                    {
+                                        "type": "Column",
+                                        "id": "header2",
+                                        "padding": "Small",
+                                        "spacing": "Medium",
+                                        "width": 50,
+                                        "items": [
+                                            {
+                                                "type": "TextBlock",
+                                                "id": "c0b3ebca-c6fc-c283-f362-8f03a0560fc8",
+                                                "text": "Resource Names",
+                                                "wrap": true,
+                                                "horizontalAlignment": "Left",
+                                                "verticalContentAlignment": "Center",
+                                                "weight": "Bolder",
+                                                "isSubtle": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {"type":"Container","padding":{"top":"Default","bottom":"None","left":"Default","right":"Default"},"style":"default","spacing":"Small","id":"high_severity","backgroundImage":{"url":"https://redlock-public.s3.amazonaws.com/images/highSeverity.png","fillMode":"RepeatVertically","verticalAlignment":"Center"},"items":[{"type":"ColumnSet","columns":[{"type":"Column","width":"50","padding":"Medium","spacing":"Medium","items":[{"type":"TextBlock","text":"${PolicyName}","wrap":true}]},{"type":"Column","width":"50","padding":"Medium","spacing":"Medium","items":[{"type":"TextBlock","text":"${ResourceName} ","wrap":true}]}],"padding":"None"},{"type":"ColumnSet","columns":[{"type":"Column","width":"50","padding":"Medium","spacing":"Medium","items":[{"type":"TextBlock","text":"${PolicyName}","wrap":true}]},{"type":"Column","width":"50","padding":"Medium","spacing":"Medium","items":[{"type":"TextBlock","text":"${ResourceName} ","wrap":true}]}],"padding":"None"}]}
+                ],
+                "padding": "Default"
+            }
+        }
+    ]
+}

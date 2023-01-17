@@ -1,0 +1,54 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: AWS CloudFormation Template to deploy insecure infrastructure - Prisma-Cloud-IaC-Demo
+Parameters:
+  CompanyName:
+    Description: Company Name
+    Type: String
+    Default: acme
+  Environment: 
+    Description: Environment
+    Type: String
+    Default: dev
+  DBName:
+    Description: Name of the Database
+    Type: String
+    Default: db1
+  Password: 
+    Description: Database Password 
+    Type: String
+    NoEcho: True
+    MinLength: 1
+    MaxLength: 41
+    AllowedPattern: ^[a-zA-Z0-9]*$
+  LatestAmiId:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+
+Resources:
+ ############
+  ###  S3  ###
+  ############
+
+  DataBucket:
+    # Public, not encrypted, no access logs, no versioning
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
+    Properties:
+      BucketName: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-data"
+      AccessControl: PublicRead
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-data"
+
+  ### TODO - Custom Upload of insecure document
+
+  FinancialsBucket:
+    # not encrypted, no access logs, no versioning
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
+    Properties:
+      BucketName: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-financials"
+      AccessControl: Private
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-financials"
