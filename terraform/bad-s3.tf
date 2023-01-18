@@ -74,3 +74,22 @@ resource "aws_s3_bucket" "bhp" {
     yor_trace = ""
   })
 }
+resource "aws_s3_bucket" "bhpdemo" {
+  # bucket is public
+  # bucket is not encrypted
+  # bucket does not have access logs
+  # bucket does not have versioning
+  bucket        = "${local.resource_prefix.value}-bhp-bucket2"
+  acl           = "public-read"
+  force_destroy = true
+  tags = merge({
+    Name        = "${local.resource_prefix.value}-bhp2"
+    Environment = local.resource_prefix.value
+    }, {
+    git_org  = "davesc63"
+    git_repo = "Prisma-Cloud-IaC-Demo"
+    customer = "BHP-IaC-Demo2"
+    }, {
+    yor_trace = ""
+  })
+}
