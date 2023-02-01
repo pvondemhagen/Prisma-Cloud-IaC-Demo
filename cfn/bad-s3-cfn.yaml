@@ -39,9 +39,10 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-data"
+        - Key: yor_trace
+          Value: 83bebbaf-8e15-4c9e-90a3-021852928e59
 
   ### TODO - Custom Upload of insecure document
-
   FinancialsBucket:
     # not encrypted, no access logs, no versioning
     Type: AWS::S3::Bucket
@@ -52,3 +53,5 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-financials"
+        - Key: yor_trace
+          Value: 9e70d515-9683-468d-9de8-95515912fd3f
