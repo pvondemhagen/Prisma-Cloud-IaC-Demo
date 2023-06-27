@@ -20,7 +20,7 @@ resource "aws_security_group" "drift-sg" {
     "0.0.0.0/0"]
   }
   tags = {
-    git_org   = "davesc63"
+    git_org   = "pvondemhagen"
     git_repo  = "Prisma-Cloud-IaC-Demo"
     customer  = "Demo-Customer-Name-Here"
     yor_trace = ""
