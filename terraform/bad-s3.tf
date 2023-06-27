@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "data" {
     Name        = "${local.resource_prefix.value}-data"
     Environment = local.resource_prefix.value
     }, {
-    git_org  = "davesc63"
+    git_org  = "pvondemhagen"
     git_repo = "Prisma-Cloud-IaC-Demo"
     customer = "Customer-Name-Here"
     }, {
@@ -29,7 +29,7 @@ resource "aws_s3_bucket" "financials" {
     Name        = "${local.resource_prefix.value}-financial"
     Environment = local.resource_prefix.value
     }, {
-    git_org  = "davesc63"
+    git_org  = "pvondemhagen"
     git_repo = "Prisma-Cloud-IaC-Demo"
     customer = "Customer-Name-Here"
     }, {
@@ -67,7 +67,7 @@ resource "aws_s3_bucket" "bhp" {
     Name        = "${local.resource_prefix.value}-bhp"
     Environment = local.resource_prefix.value
     }, {
-    git_org  = "davesc63"
+    git_org  = "pvondemhagen"
     git_repo = "Prisma-Cloud-IaC-Demo"
     customer = "BHP-IaC-Demo"
     }, {
@@ -86,7 +86,7 @@ resource "aws_s3_bucket" "bhpdemo" {
     Name        = "${local.resource_prefix.value}-bhp2"
     Environment = local.resource_prefix.value
     }, {
-    git_org  = "davesc63"
+    git_org  = "pvondemhagen"
     git_repo = "Prisma-Cloud-IaC-Demo"
     customer = "BHP-IaC-Demo2"
     }, {

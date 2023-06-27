@@ -39,9 +39,10 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-data"
+        - Key: git_org
+          Value: pvondemhagen
 
   ### TODO - Custom Upload of insecure document
-
   FinancialsBucket:
     # not encrypted, no access logs, no versioning
     Type: AWS::S3::Bucket
@@ -52,3 +53,5 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-financials"
+        - Key: git_org
+          Value: pvondemhagen

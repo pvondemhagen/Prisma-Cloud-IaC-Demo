@@ -32,7 +32,7 @@ resource "azurerm_storage_account" "tfstorage" {
     git_last_modified_at = ""
     git_last_modified_by = ""
     git_modifiers        = ""
-    git_org              = "davesc63"
+    git_org              = "pvondemhagen"
     git_repo             = "dPrisma-Cloud-IaC-Demo"
     yor_trace            = ""
   }

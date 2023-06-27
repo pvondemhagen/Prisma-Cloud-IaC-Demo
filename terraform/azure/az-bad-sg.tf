@@ -32,7 +32,7 @@ resource azurerm_network_security_group "bad_sg" {
     git_last_modified_at = ""
     git_last_modified_by = "dmcgovern@paloaltonetworks.com"
     git_modifiers        = "davesc63"
-    git_org              = "davesc63"
+    git_org              = "pvondemhagen"
     git_repo             = "Prisma-Cloud-IaC-Demo"
     yor_trace            = ""
   }

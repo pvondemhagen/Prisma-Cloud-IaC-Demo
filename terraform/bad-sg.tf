@@ -21,7 +21,7 @@ resource "aws_security_group" "web-node" {
     "0.0.0.0/0"]
   }
   tags = {
-    git_org   = "davesc63"
+    git_org   = "pvondemhagen"
     git_repo  = "Prisma-Cloud-IaC-Demo"
     customer  = "Demo-Customer-Name-Here"
     yor_trace = "86352312-9b96-40f4-aa50-5c1b25c44e37"
@@ -62,7 +62,7 @@ resource "aws_security_group" "bad-sg" {
     "0.0.0.0/0"]
   }
   tags = {
-    git_org   = "davesc63"
+    git_org   = "pvondemhagen"
     git_repo  = "Prisma-Cloud-IaC-Demo"
     customer  = "Demo-Customer-Name-Here"
     yor_trace = "4003b87d-8532-47f0-8dcc-938fb4c94c53"
